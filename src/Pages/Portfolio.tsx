@@ -24,7 +24,7 @@ const data:PortfolioList= [
   {
     title : "Attendance Webapp",
     thumbnail : thumbAttendance,
-    description : "Attendance webapp system that can be used by school, university, office, etc. to easily maintain the attendance of students or workers",
+    description : "Attendance webapp system that can be used by school, university, office, etc. to easily maintain the attendance of students or workers.",
     route : "/portfolio-attendance"
   }
 ]
