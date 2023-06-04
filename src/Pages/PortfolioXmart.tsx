@@ -55,11 +55,6 @@ const PortfolioXmart = () => {
       modifier:2.5,
      }}
      className="swiper-container"
-    //  navigation
-    //  pagination={{clickable : true}}
-    //  scrollbar={{draggable: true}}
-    //  onSlideChange={() => console.log('slide change')}
-    //  onSwiper={(swiper) => console.log(swiper)}
      >
       <SwiperSlide><img src={thumbnail} alt="thumbnail" className="slide-img"/></SwiperSlide>
       <SwiperSlide><img src={branchadmin1} alt="branchadmin1" className="slide-img"/></SwiperSlide>
@@ -78,7 +73,7 @@ const PortfolioXmart = () => {
       <SwiperSlide><img src={user10} alt="user10"className="slide-img"/></SwiperSlide>
       <SwiperSlide><img src={user11} alt="user11"className="slide-img"/></SwiperSlide>
       <div className='swiper-pagination'></div>
-      </Swiper>  
+      </Swiper>
     </>
   )
 }

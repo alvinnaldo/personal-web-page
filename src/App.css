@@ -10,6 +10,9 @@ body > #root > :not(.navbar) {
 
 body {
   overflow-x: hidden;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='150' preserveAspectRatio='none' viewBox='0 0 1440 150'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1138%26quot%3b)' fill='none'%3e%3cpath d='M44 150L194 0L447.5 0L297.5 150z' fill='url(%26quot%3b%23SvgjsLinearGradient1139%26quot%3b)'%3e%3c/path%3e%3cpath d='M254.60000000000002 150L404.6 0L613.1 0L463.1 150z' fill='url(%26quot%3b%23SvgjsLinearGradient1139%26quot%3b)'%3e%3c/path%3e%3cpath d='M490.20000000000005 150L640.2 0L962.7 0L812.7 150z' fill='url(%26quot%3b%23SvgjsLinearGradient1139%26quot%3b)'%3e%3c/path%3e%3cpath d='M717.8000000000001 150L867.8000000000001 0L1188.8000000000002 0L1038.8000000000002 150z' fill='url(%26quot%3b%23SvgjsLinearGradient1139%26quot%3b)'%3e%3c/path%3e%3cpath d='M1434 150L1284 0L1036.5 0L1186.5 150z' fill='url(%26quot%3b%23SvgjsLinearGradient1140%26quot%3b)'%3e%3c/path%3e%3cpath d='M1195.4 150L1045.4 0L911.9000000000001 0L1061.9 150z' fill='url(%26quot%3b%23SvgjsLinearGradient1140%26quot%3b)'%3e%3c/path%3e%3cpath d='M959.8 150L809.8 0L698.8 0L848.8 150z' fill='url(%26quot%3b%23SvgjsLinearGradient1140%26quot%3b)'%3e%3c/path%3e%3cpath d='M709.1999999999999 150L559.1999999999999 0L241.19999999999993 0L391.19999999999993 150z' fill='url(%26quot%3b%23SvgjsLinearGradient1140%26quot%3b)'%3e%3c/path%3e%3cpath d='M1344.0564718564551 150L1440 54.05647185645515L1440 150z' fill='url(%26quot%3b%23SvgjsLinearGradient1139%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 150L95.94352814354485 150L 0 54.05647185645515z' fill='url(%26quot%3b%23SvgjsLinearGradient1140%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1138'%3e%3crect width='1440' height='150' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1139'%3e%3cstop stop-color='rgba(208%2c 3%2c 62%2c 0.22)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(208%2c 3%2c 62%2c 0.22)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1140'%3e%3cstop stop-color='rgba(208%2c 3%2c 62%2c 0.22)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(208%2c 3%2c 62%2c 0.22)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .navbar {
@@ -110,6 +113,10 @@ body {
     right: 7% !important;
     top: 15% !important;
   }
+  .portfolio-list {
+    width: 100% !important;
+    font-size: small !important;
+  }
 }
 
 @media screen and (min-width : 828px) and (max-width : 1180px) {
@@ -160,6 +167,7 @@ body {
 
 .my-photo {
   width: 15rem;
+  z-index: -1;
 }
 
 .profile-text {
@@ -331,4 +339,43 @@ button[class="back-button"] {
 .clear-logo:hover {
   transform: scale(0.95);
   opacity: 80%;
+}
+
+.portfolio-list:last-child {
+  margin-bottom: 10rem;
+}
+
+.my-photo {
+  animation: photo-appear 500ms ease-in-out;
+}
+
+.profile-text {
+  animation: intro-appear 500ms ease-in-out;
+}
+
+.linked-in-home, .linked-in-contact {
+  animation: linked-in-appear 1000ms ease-in-out;
+}
+
+@keyframes photo-appear {
+  0% {transform: translateY(-15rem);
+  opacity: 0;}
+  100% {transform: translateY(0);
+  opacity: 100%;}
+}
+
+@keyframes intro-appear {
+  0% {
+  transform: translateY(18rem);
+  opacity: 0;
+  }
+  100% {
+  transform: translateY(0);
+  opacity: 100%;
+  }
+}
+
+@keyframes linked-in-appear {
+  0% {opacity: 0;}
+  100% {opacity: 100%;}
 }

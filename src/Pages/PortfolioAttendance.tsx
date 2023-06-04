@@ -48,11 +48,6 @@ const PortfolioAttendance = () => {
       modifier:2.5,
      }}
      className="swiper-container"
-    //  navigation
-    //  pagination={{clickable : true}}
-    //  scrollbar={{draggable: true}}
-    //  onSlideChange={() => console.log('slide change')}
-    //  onSwiper={(swiper) => console.log(swiper)}
      >
       <SwiperSlide><img src={thumbnail} alt="thumbnail" className="slide-img"/></SwiperSlide>
       <SwiperSlide><img src={user1} alt="user1" className="slide-img"/></SwiperSlide>
@@ -65,7 +60,7 @@ const PortfolioAttendance = () => {
       <SwiperSlide><img src={admin5} alt="admin5" className="slide-img"/></SwiperSlide>
       <SwiperSlide><img src={admin6} alt="admin6" className="slide-img"/></SwiperSlide>
       <div className='swiper-pagination'></div>
-      </Swiper>  
+      </Swiper>
     </>
   )
 }
